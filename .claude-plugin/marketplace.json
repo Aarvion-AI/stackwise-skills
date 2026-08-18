@@ -1,0 +1,56 @@
+{
+  "name": "stackwise-skills",
+  "owner": {
+    "name": "Subhash"
+  },
+  "metadata": {
+    "description": "End-to-end development skills for Claude Code: frontend, backend, mobile, infra, and QA, framework-wise",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "stackwise",
+      "source": "./",
+      "description": "Framework-specific skills covering the full change lifecycle: React, Vue, NestJS, FastAPI, Flutter, React Native, Terraform, Playwright E2E, and real-device mobile QA with Appium. Every skill bakes in verification loops so changes are proven, not just written.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Subhash",
+        "email": "subhash@aarvion.ai"
+      },
+      "homepage": "https://github.com/Aarvion-AI/stackwise-skills",
+      "repository": "https://github.com/Aarvion-AI/stackwise-skills",
+      "license": "MIT",
+      "keywords": [
+        "claude-skill",
+        "claude-code",
+        "fullstack",
+        "mobile",
+        "react",
+        "nextjs",
+        "vue",
+        "nestjs",
+        "fastapi",
+        "flutter",
+        "react-native",
+        "terraform",
+        "playwright",
+        "appium",
+        "device-farm",
+        "qa",
+        "testing",
+        "e2e",
+        "infrastructure",
+        "devops"
+      ],
+      "category": "development",
+      "tags": [
+        "fullstack",
+        "mobile",
+        "qa",
+        "infra",
+        "frameworks"
+      ],
+      "skills": "./skills/"
+    }
+  ]
+}
