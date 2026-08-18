@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "End-to-end development skills for Claude Code: framework-specific expertise for frontend (React, Vue), backend (NestJS, FastAPI), mobile (Flutter, React Native), infra (Terraform), and QA (Playwright E2E, Appium real-device testing). Every skill enforces verification loops - type-check until clean, tests pass, change proven on a real browser or device.",
   "author": {
-    "name": "Subhash"
+    "name": "Aarvion AI",
+    "email": "subhash@aarvion.ai"
   },
   "license": "MIT",
   "repository": "https://github.com/Aarvion-AI/stackwise-skills",
