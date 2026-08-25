@@ -15,11 +15,15 @@ Adding a framework to Stackwise is one well-defined PR. CI validates the structu
 
 ## Run it locally before you open the PR
 
-Point Claude Code at your checkout instead of the published marketplace:
+Fork the repo first. `main` is protected and only maintainers have write
+access, so everyone, team included, works from a fork:
 
 ```bash
-git clone https://github.com/<you>/stackwise-skills && cd stackwise-skills
+gh repo fork Aarvion-AI/stackwise-skills --clone
+cd stackwise-skills && git checkout -b skill-<framework>
 ```
+
+Then point Claude Code at your checkout instead of the published marketplace:
 
 ```
 /plugin marketplace add ./
@@ -68,9 +72,10 @@ on skill content: a skill that duplicates what models already do well gets
 trimmed, not merged as-is. Keep the discussion in the PR so the reasoning stays
 searchable for the next contributor.
 
-CI must be green and the PR checklist filled before merge. We squash-merge, so
-your local commit history does not need to be tidy, but the PR title does: it
-becomes the changelog line. Add a `## Unreleased` entry to
+`main` requires a pull request, a passing `validate` check, one approving
+review, and all review threads resolved. We squash-merge, so your local commit
+history does not need to be tidy, but the PR title does: it becomes the squash
+commit message and the changelog line. Add a `## Unreleased` entry to
 [CHANGELOG.md](CHANGELOG.md) for anything that changes skill behavior.
 
 ## Licensing
