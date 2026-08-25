@@ -2,12 +2,11 @@ name: Validate skills
 
 on:
   pull_request:
-    paths:
-      - "skills/**"
-      - "scripts/validate_skills.py"
-      - "templates/**"
   push:
     branches: [main]
+
+permissions:
+  contents: read
 
 jobs:
   validate:
@@ -20,5 +19,4 @@ jobs:
       - name: Validate skill structure
         run: python3 scripts/validate_skills.py
       - name: Validate plugin manifests
-        run: |
-          python3 -c "import json; json.load(open('.claude-plugin/marketplace.json')); json.load(open('.claude-plugin/plugin.json'))"
+        run: python3 scripts/validate_manifests.py

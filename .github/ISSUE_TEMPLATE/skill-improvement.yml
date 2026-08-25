@@ -1,0 +1,18 @@
+name: Improve an existing skill
+description: Add a pattern, reference, or workflow step to a skill that already exists.
+labels: ["enhancement"]
+body:
+  - type: input
+    id: skill
+    attributes:
+      label: Skill
+      placeholder: terraform-expert
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What to add and why it earns its context cost
+      description: Skills are budget-constrained. Explain what Claude does wrong without this, not just that the topic is useful.
+    validations:
+      required: true

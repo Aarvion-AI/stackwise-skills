@@ -1,6 +1,7 @@
 ## What
 
 <!-- New skill: which framework? | Update: which skill, what changed? -->
+<!-- Link the issue this closes: Closes #123 -->
 
 ## Checklist (new or updated skill)
 
@@ -10,3 +11,6 @@
 - [ ] References target the framework's **current major version** (stated in `metadata.frameworks`)
 - [ ] README table row added / roadmap checkbox ticked (new skills)
 - [ ] Verification commands are real and runnable, not placeholders
+- [ ] Loaded the plugin from a local checkout and confirmed the skill auto-loads on a real task, without naming it
+- [ ] `CHANGELOG.md` Unreleased entry added (anything that changes skill behavior)
+- [ ] No em dashes anywhere (CI rejects them)

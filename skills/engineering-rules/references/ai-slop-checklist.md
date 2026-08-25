@@ -186,7 +186,7 @@ users = load_users()  # load the users
 users = load_users()
 ```
 
-TODO survives only as `TODO(subhash, #482): remove after v2 migration`, with an owner and an issue.
+TODO survives only as `TODO(owner, #482): remove after v2 migration`, with an owner and an issue.
 
 ## 11. Gratuitous Null Checks After Non-Nullable Returns
 

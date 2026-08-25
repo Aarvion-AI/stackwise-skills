@@ -1,0 +1,45 @@
+name: Skill bug or outdated guidance
+description: A skill teaches something wrong, outdated, or fails to load when it should.
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: skill
+    attributes:
+      label: Skill
+      options:
+        - engineering-rules
+        - fastapi-expert
+        - fastify-expert
+        - flutter-expert
+        - go-expert
+        - jetpack-compose-expert
+        - mobile-qa-expert
+        - nestjs-expert
+        - playwright-expert
+        - react-expert
+        - react-native-expert
+        - swiftui-expert
+        - terraform-expert
+        - vue-expert
+        - repo tooling (validator, CI, templates)
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options:
+        - Guidance is wrong or no longer idiomatic
+        - Framework released a new version, references are stale
+        - Skill did not auto-load when it should have
+        - Skill loaded when it should not have
+        - Code sample does not run
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: What happened
+      description: Include the file and line (for example `skills/react-expert/references/performance.md:42`), what it says, and what it should say. Link upstream docs where possible.
+    validations:
+      required: true

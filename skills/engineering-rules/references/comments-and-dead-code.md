@@ -120,7 +120,7 @@ def get_user(user_id: str) -> User:
     """Gets a user by user id."""
 ```
 
-Allowed TODO form: `# TODO(subhash, #482): drop after the v2 migration completes`. Owner plus tracking issue, or it does not ship.
+Allowed TODO form: `# TODO(owner, #482): drop after the v2 migration completes`. Owner plus tracking issue, or it does not ship.
 
 ### If a comment explains "what", rewrite the code
 

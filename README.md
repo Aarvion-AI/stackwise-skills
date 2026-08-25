@@ -1,5 +1,10 @@
 # Stackwise Skills
 
+[![Validate skills](https://github.com/Aarvion-AI/stackwise-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/Aarvion-AI/stackwise-skills/actions/workflows/validate.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Skills](https://img.shields.io/badge/skills-14-brightgreen.svg)](#whats-inside)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
 **End-to-end development skills for Claude Code - frontend, backend, mobile, infra, and QA - one plugin install.**
 
 Every skill is framework-specific, production-focused, and follows one enforced template, so Claude loads exactly the expertise your stack needs and nothing else. Ship a new feature or fix a bug with the same pipeline across web, mobile, and infrastructure - including the step most skill packs skip: **verifying the change on a real browser or real device before you call it done.**
@@ -40,7 +45,7 @@ Most skill packs cover *writing* code. Real feature work is write → wire the A
 
 ## Roadmap - contribute a framework
 
-The skill template and CI validation make adding a framework a well-defined PR. Pick an unclaimed one, copy [templates/SKILL_TEMPLATE.md](templates/SKILL_TEMPLATE.md), and see [CONTRIBUTING.md](CONTRIBUTING.md).
+The skill template and CI validation make adding a framework a well-defined PR: claim it in an issue, copy [templates/SKILL_TEMPLATE.md](templates/SKILL_TEMPLATE.md), write 3-6 references, and run the validator. Full walkthrough in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 - [x] React · Vue · NestJS · FastAPI · Fastify · Go · Flutter · React Native · SwiftUI · Jetpack Compose · Terraform · Playwright · Appium
 - [ ] Frontend: Angular, Svelte/SvelteKit, Astro
@@ -50,6 +55,26 @@ The skill template and CI validation make adding a framework a well-defined PR. 
 - [ ] QA: Cypress, Maestro, Detox, k6 (load), pytest/Jest deep-dives
 - [ ] Data: PostgreSQL, Redis, Kafka, dbt
 
+## Contributing
+
+New frameworks, version bumps on existing skills, and corrections to guidance
+that has gone stale are all welcome. Start here:
+
+- [CONTRIBUTING.md](CONTRIBUTING.md) - the skill contract, how to run a skill
+  from a local checkout, and the quality bar reviewers apply
+- [Claim a framework](https://github.com/Aarvion-AI/stackwise-skills/issues/new?template=new-skill.yml)
+  before you start, so two people do not write the same skill
+- [Report stale guidance](https://github.com/Aarvion-AI/stackwise-skills/issues/new?template=skill-fix.yml)
+  when a framework moves and a skill does not
+
+Every PR runs `scripts/validate_skills.py`, which enforces the template
+contract: a "Use when" description, a verification loop in the Core Workflow,
+and every reference file listed in the Reference Guide table. Run it locally and
+your PR is already green.
+
+By participating you agree to the [Code of Conduct](CODE_OF_CONDUCT.md).
+Security concerns go through [SECURITY.md](SECURITY.md), not a public issue.
+
 ## License
 
-MIT
+MIT. See [LICENSE](LICENSE). Contributions are accepted under the same license.

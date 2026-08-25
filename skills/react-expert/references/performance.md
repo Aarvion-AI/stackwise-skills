@@ -122,7 +122,7 @@ Order of operations:
 3. Push state down: a `useState` high in the tree re-renders everything below; move it into the leaf that uses it.
 4. Lift content out: pass expensive subtrees as `children` to the stateful wrapper - children props don't re-render when the wrapper's state changes.
 5. For list-heavy pages, virtualize (`@tanstack/react-virtual`) past ~200 rows.
-6. Only after 1–5: hand-memoization, and only where the compiler is provably skipping.
+6. Only after 1-5: hand-memoization, and only where the compiler is provably skipping.
 
 ## Measuring
 

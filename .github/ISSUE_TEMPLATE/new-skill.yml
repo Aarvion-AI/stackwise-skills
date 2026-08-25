@@ -1,0 +1,47 @@
+name: Claim a framework skill
+description: Claim an unbuilt framework so two people do not write the same skill.
+title: "skill: <framework>"
+labels: ["new skill"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One issue per framework. Check the [roadmap](https://github.com/Aarvion-AI/stackwise-skills#roadmap--contribute-a-framework)
+        and open issues first, then follow [CONTRIBUTING.md](https://github.com/Aarvion-AI/stackwise-skills/blob/main/CONTRIBUTING.md).
+  - type: input
+    id: framework
+    attributes:
+      label: Framework and version
+      description: The current major version the skill will target.
+      placeholder: SvelteKit 2 / Svelte 5
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options: [core, frontend, backend, mobile, infra, qa]
+    validations:
+      required: true
+  - type: textarea
+    id: triggers
+    attributes:
+      label: Auto-load triggers
+      description: Files, config names, and keywords that should make this skill load. This becomes the "Use when" description.
+      placeholder: "*.svelte files, svelte.config.js, mentions of runes, SvelteKit load functions, +page.server.ts"
+    validations:
+      required: true
+  - type: textarea
+    id: gaps
+    attributes:
+      label: What does Claude get wrong here today?
+      description: The recent API changes, footguns, and deprecated idioms this skill will correct. This is what the skill is for.
+    validations:
+      required: true
+  - type: checkboxes
+    id: intent
+    attributes:
+      label: Intent
+      options:
+        - label: I plan to open the PR myself.
+        - label: I am proposing this for someone else to pick up.
