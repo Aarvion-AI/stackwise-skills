@@ -4,7 +4,7 @@ description: Use when <concrete trigger conditions - file extensions, config fil
 license: MIT
 metadata:
   version: "0.1.0"
-  category: <frontend | backend | mobile | infra | qa>
+  category: <frontend | backend | mobile | infra | qa | data>
   frameworks: <Framework + versions covered, e.g. "React 19, Next.js 15">
   triggers: <comma-separated keywords a task description would contain>
   related: <other stackwise skills that chain with this one>

@@ -15,7 +15,7 @@ TEMPLATE = REPO / "templates" / "SKILL_TEMPLATE.md"
 
 REQUIRED_FRONTMATTER = ["name", "description", "license"]
 REQUIRED_METADATA = ["version", "category", "frameworks", "triggers"]
-VALID_CATEGORIES = {"core", "frontend", "backend", "mobile", "infra", "qa"}
+VALID_CATEGORIES = {"core", "frontend", "backend", "mobile", "infra", "qa", "data"}
 REQUIRED_SECTIONS = [
     "## When to Use This Skill",
     "## Core Workflow",

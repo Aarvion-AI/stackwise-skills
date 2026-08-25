@@ -98,3 +98,12 @@ sure its license permits redistribution under MIT and note the source in the PR.
 Participation is governed by the [Code of Conduct](CODE_OF_CONDUCT.md). Report
 security concerns privately per [SECURITY.md](SECURITY.md) rather than in a
 public issue.
+
+## After your first merged PR
+
+Land one PR and you are invited as a collaborator with push access, so you can
+branch directly in this repo instead of keeping a fork in sync. `main` stays
+protected either way: every change goes through a pull request with a passing
+`validate` check and one approving review.
+
+Nothing about the first PR changes. Fork, branch, open it.

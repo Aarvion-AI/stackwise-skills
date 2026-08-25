@@ -19,7 +19,7 @@ REPO = Path(__file__).resolve().parent.parent
 TEMPLATE = REPO / "templates" / "SKILL_TEMPLATE.md"
 SKILLS_DIR = REPO / "skills"
 
-CATEGORIES = ["frontend", "backend", "mobile", "infra", "qa", "core"]
+CATEGORIES = ["frontend", "backend", "mobile", "infra", "qa", "data", "core"]
 NAME_PATTERN = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 
 REFERENCE_STUB = """# {title}

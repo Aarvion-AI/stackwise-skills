@@ -79,6 +79,9 @@ Every PR runs the same validator, which enforces the template contract: a "Use w
 and every reference file listed in the Reference Guide table. Run it locally and
 your PR is already green.
 
+Land one PR and you get push access to the repo, so your second contribution
+does not need a fork.
+
 By participating you agree to the [Code of Conduct](CODE_OF_CONDUCT.md).
 Security concerns go through [SECURITY.md](SECURITY.md), not a public issue.
 

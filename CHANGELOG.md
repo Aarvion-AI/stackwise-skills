@@ -14,6 +14,9 @@ template contract or plugin layout is a major.
   and reference stubs from the template.
 - Contributor governance: Code of Conduct, security policy, support guide,
   CODEOWNERS, and structured issue forms.
+- `data` skill category for database, cache, streaming, and analytics skills.
+- Workflow that invites a contributor as a collaborator after their first
+  merged PR, gated on a `COLLABORATOR_INVITE_TOKEN` secret.
 
 ### Changed
 

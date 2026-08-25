@@ -1,0 +1,36 @@
+name: Invite contributor
+
+# Anyone who lands a PR is invited as a collaborator with push access, so
+# repeat contributors branch in-repo instead of maintaining a fork. Adding a
+# collaborator needs admin rights, which GITHUB_TOKEN does not have, so this
+# requires a COLLABORATOR_INVITE_TOKEN secret (a PAT with repo admin scope).
+# Without that secret the job is skipped and merges behave normally.
+
+on:
+  pull_request_target:
+    types: [closed]
+
+permissions:
+  contents: read
+
+jobs:
+  invite:
+    if: github.event.pull_request.merged == true && github.event.pull_request.user.type != 'Bot'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Invite the author as a collaborator
+        env:
+          GH_TOKEN: ${{ secrets.COLLABORATOR_INVITE_TOKEN }}
+          AUTHOR: ${{ github.event.pull_request.user.login }}
+          REPO: ${{ github.repository }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "COLLABORATOR_INVITE_TOKEN not set; skipping invite for $AUTHOR."
+            exit 0
+          fi
+          if gh api "repos/$REPO/collaborators/$AUTHOR" --silent 2>/dev/null; then
+            echo "$AUTHOR already has access."
+            exit 0
+          fi
+          gh api -X PUT "repos/$REPO/collaborators/$AUTHOR" -f permission=push
+          echo "Invited $AUTHOR with push access."
