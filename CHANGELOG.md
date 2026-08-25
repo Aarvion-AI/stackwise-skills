@@ -8,6 +8,21 @@ template contract or plugin layout is a major.
 
 ## [Unreleased]
 
+### Added
+
+- `scripts/new_skill.py` scaffolds a skill directory, a pre-filled `SKILL.md`,
+  and reference stubs from the template.
+- Contributor governance: Code of Conduct, security policy, support guide,
+  CODEOWNERS, and structured issue forms.
+
+### Changed
+
+- `scripts/validate_skills.py` now rejects SKILL.md files that still contain
+  template placeholders, matched verbatim against `templates/SKILL_TEMPLATE.md`
+  so real angle brackets in code samples are not flagged.
+- Manifest validation moved to `scripts/validate_manifests.py` and now checks
+  that plugin and marketplace names and versions agree.
+
 ## [0.1.0] - 2026-08-18
 
 ### Added

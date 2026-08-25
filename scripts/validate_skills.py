@@ -11,6 +11,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
 SKILLS_DIR = REPO / "skills"
+TEMPLATE = REPO / "templates" / "SKILL_TEMPLATE.md"
 
 REQUIRED_FRONTMATTER = ["name", "description", "license"]
 REQUIRED_METADATA = ["version", "category", "frameworks", "triggers"]
@@ -23,6 +24,18 @@ REQUIRED_SECTIONS = [
     "## Common Mistakes",
 ]
 MAX_BODY_LINES = 250
+
+
+def template_placeholders() -> set[str]:
+    """Angle-bracket placeholders lifted verbatim from the template.
+
+    Matching the template's exact strings avoids flagging real angle brackets in
+    code samples (`<div>`, `<script setup>`, generics).
+    """
+    if not TEMPLATE.is_file():
+        return set()
+    found = set(re.findall(r"<[^<>\n]{3,}?>", TEMPLATE.read_text(encoding="utf-8")))
+    return {p for p in found if not p.startswith("</")}
 
 
 def parse_frontmatter(text: str) -> tuple[dict, str]:
@@ -109,6 +122,12 @@ def validate_skill(skill_dir: Path) -> list[str]:
             "Core Workflow has no verification loop "
             "(needs an explicit 'fix and re-run until clean/passing' step)"
         )
+
+    for placeholder in sorted(template_placeholders()):
+        if placeholder in text:
+            errors.append(
+                f"SKILL.md still contains the template placeholder '{placeholder}'; fill it in"
+            )
 
     listed_refs = set(re.findall(r"`references/([\w./-]+\.md)`", body))
     actual_refs = (

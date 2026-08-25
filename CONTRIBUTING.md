@@ -5,7 +5,17 @@ Adding a framework to Stackwise is one well-defined PR. CI validates the structu
 ## Add a skill in 5 steps
 
 1. **Claim it** - open an issue titled `skill: <framework>` so two people don't build the same one. Check the [README roadmap](README.md#roadmap--contribute-a-framework) for unclaimed frameworks.
-2. **Copy the template** - `mkdir -p skills/<framework>-expert/references && cp templates/SKILL_TEMPLATE.md skills/<framework>-expert/SKILL.md`.
+2. **Scaffold it** - one command writes the skill directory, a pre-filled
+   `SKILL.md`, and your reference stubs:
+
+   ```bash
+   python3 scripts/new_skill.py svelte --category frontend \
+     --frameworks "Svelte 5, SvelteKit 2" \
+     --refs runes-reactivity load-functions forms-actions testing
+   ```
+
+   The scaffold deliberately fails validation until you fill it in, so the
+   validator doubles as your checklist.
 3. **Write the SKILL.md** - follow the template sections exactly. The hard requirements:
    - `description` frontmatter starts with **"Use when"** and names concrete triggers (file extensions, config files, framework keywords). This is what makes the skill auto-load - write it for the matcher, not for humans.
    - **Every Core Workflow step that produces code is followed by a verification step** with a fix-until-clean loop ("run X; fix all issues and re-run until clean"). Skills without verification loops are not accepted.

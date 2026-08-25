@@ -60,6 +60,7 @@ The skill template and CI validation make adding a framework a well-defined PR: 
 New frameworks, version bumps on existing skills, and corrections to guidance
 that has gone stale are all welcome. Start here:
 
+- **[Good first issues](https://github.com/Aarvion-AI/stackwise-skills/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)** - unclaimed frameworks, scoped and ready to pick up
 - [CONTRIBUTING.md](CONTRIBUTING.md) - the skill contract, how to run a skill
   from a local checkout, and the quality bar reviewers apply
 - [Claim a framework](https://github.com/Aarvion-AI/stackwise-skills/issues/new?template=new-skill.yml)
@@ -67,8 +68,14 @@ that has gone stale are all welcome. Start here:
 - [Report stale guidance](https://github.com/Aarvion-AI/stackwise-skills/issues/new?template=skill-fix.yml)
   when a framework moves and a skill does not
 
-Every PR runs `scripts/validate_skills.py`, which enforces the template
-contract: a "Use when" description, a verification loop in the Core Workflow,
+Scaffolding is one command, and the validator tells you what is still missing:
+
+```bash
+python3 scripts/new_skill.py <framework> --category frontend --refs a b c
+python3 scripts/validate_skills.py
+```
+
+Every PR runs the same validator, which enforces the template contract: a "Use when" description, a verification loop in the Core Workflow,
 and every reference file listed in the Reference Guide table. Run it locally and
 your PR is already green.
 
