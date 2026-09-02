@@ -1,7 +1,7 @@
 {
   "name": "stackwise",
   "version": "0.1.0",
-  "description": "End-to-end development skills for Claude Code: framework-specific expertise for frontend (React, Vue), backend (NestJS, FastAPI), mobile (Flutter, React Native), infra (Terraform), and QA (Playwright E2E, Appium real-device testing). Every skill enforces verification loops - type-check until clean, tests pass, change proven on a real browser or device.",
+  "description": "End-to-end development skills for Claude Code: framework-specific expertise for frontend (React, Vue), backend (NestJS, FastAPI, Stripe), mobile (Flutter, React Native), infra (Terraform, GitHub Actions), and QA (Playwright E2E, Cypress, Appium real-device testing). Every skill enforces verification loops - type-check until clean, tests pass, change proven on a real browser or device.",
   "author": {
     "name": "Aarvion AI",
     "email": "subhash@aarvion.ai"
@@ -23,7 +23,14 @@
     "playwright",
     "appium",
     "qa",
-    "testing"
+    "testing",
+    "stripe",
+    "payments",
+    "github-actions",
+    "ci-cd",
+    "cypress",
+    "e2e",
+    "devops"
   ],
   "skills": "./skills/"
 }

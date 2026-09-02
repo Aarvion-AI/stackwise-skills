@@ -11,7 +11,7 @@
     {
       "name": "stackwise",
       "source": "./",
-      "description": "Framework-specific skills covering the full change lifecycle: React, Vue, NestJS, FastAPI, Flutter, React Native, Terraform, Playwright E2E, and real-device mobile QA with Appium. Every skill bakes in verification loops so changes are proven, not just written.",
+      "description": "Framework-specific skills covering React, Vue, NestJS, FastAPI, Stripe payments, Flutter, React Native, Terraform, GitHub Actions CI/CD, Cypress E2E, Playwright E2E, and Appium mobile QA.",
       "version": "0.1.0",
       "author": {
         "name": "Aarvion AI",
@@ -40,7 +40,13 @@
         "testing",
         "e2e",
         "infrastructure",
-        "devops"
+        "devops",
+        "stripe",
+        "payments",
+        "github-actions",
+        "ci-cd",
+        "cypress",
+        "webhook"
       ],
       "category": "development",
       "tags": [
