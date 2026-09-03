@@ -10,6 +10,7 @@ template contract or plugin layout is a major.
 
 ### Added
 
+- `docker-expert` skill for Docker 27+, BuildKit, multi-stage images, Compose, and container hardening.
 - `scripts/new_skill.py` scaffolds a skill directory, a pre-filled `SKILL.md`,
   and reference stubs from the template.
 - Contributor governance: Code of Conduct, security policy, support guide,

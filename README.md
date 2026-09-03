@@ -34,6 +34,7 @@ Skills activate automatically based on what you're working on - open a `.tsx` fi
 | Mobile | `swiftui-expert` | iOS native: SwiftUI, Swift 6 concurrency, Observation, SwiftData |
 | Mobile | `jetpack-compose-expert` | Android native: Compose, state/recomposition, Hilt, Navigation |
 | Infra | `terraform-expert` | Terraform 1.x, module design, state management, plan review, CI |
+| Infra | `docker-expert` | Docker 27+, BuildKit, multi-stage images, Docker Compose, health checks |
 | QA (web) | `playwright-expert` | Playwright E2E, fixtures, network mocking, visual regression, CI |
 | QA (mobile) | `mobile-qa-expert` | Appium 2, real-device clouds (AWS Device Farm, BrowserStack), unattended flows |
 
@@ -51,7 +52,7 @@ The skill template and CI validation make adding a framework a well-defined PR: 
 - [ ] Frontend: Angular, Svelte/SvelteKit, Astro
 - [ ] Backend: Django, Spring Boot, Rails, Laravel, .NET, Elixir/Phoenix
 - [ ] Mobile: Kotlin Multiplatform, native watchOS/Wear OS, mobile release engineering (Fastlane, store rollouts)
-- [ ] Infra: AWS CDK, Pulumi, Kubernetes/Helm, GitHub Actions, Docker
+- [ ] Infra: AWS CDK, Pulumi, Kubernetes/Helm, GitHub Actions
 - [ ] QA: Cypress, Maestro, Detox, k6 (load), pytest/Jest deep-dives
 - [ ] Data: PostgreSQL, Redis, Kafka, dbt
 
