@@ -24,6 +24,7 @@ Skills activate automatically based on what you're working on - open a `.tsx` fi
 | Backend | `fastapi-expert` | FastAPI, Pydantic v2, async SQLAlchemy, dependency injection, testing |
 | Backend | `fastify-expert` | Fastify 5, plugins/encapsulation, TypeBox validation, hooks, testing |
 | Backend | `go-expert` | Go 1.23+, net/http services, errors/context, concurrency, pgx/sqlc |
+| Backend | `postgres-expert` | PostgreSQL 17, schema design, zero-downtime migrations, indexes, EXPLAIN ANALYZE |
 | Mobile | `flutter-expert` | Flutter 3.x, Riverpod/Bloc, GoRouter, platform channels |
 | Mobile | `react-native-expert` | React Native 0.7x, Expo Router, native modules, platform handling |
 | Mobile | `swiftui-expert` | iOS native: SwiftUI, Swift 6 concurrency, Observation, SwiftData |
