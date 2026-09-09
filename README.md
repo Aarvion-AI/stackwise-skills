@@ -1,8 +1,11 @@
 # Stackwise Skills
 
 [![Validate skills](https://github.com/Aarvion-AI/stackwise-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/Aarvion-AI/stackwise-skills/actions/workflows/validate.yml)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 [![Skills](https://img.shields.io/badge/skills-14-brightgreen.svg)](#whats-inside)
+
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 **End-to-end development skills for Claude Code - frontend, backend, mobile, infra, and QA - one plugin install.**
@@ -11,12 +14,10 @@ Every skill is framework-specific, production-focused, and follows one enforced 
 
 ## Install
 
-```
+```text
 /plugin marketplace add Aarvion-AI/stackwise-skills
-/plugin install stackwise@stackwise-skills
-```
 
-Skills activate automatically based on what you're working on - open a `.tsx` file and ask for a feature, and `react-expert` loads; touch a `main.tf`, and `terraform-expert` loads. No manual invocation needed.
+/plugin install stackwise@stackwise-skills
 
 ## What's inside
 
@@ -24,6 +25,7 @@ Skills activate automatically based on what you're working on - open a `.tsx` fi
 |---|---|---|
 | Core | `engineering-rules` | Repo-wide code rules: reusability, readability, no AI slop, dead-code removal, why-only comments |
 | Frontend | `react-expert` | React 19, Next.js App Router, Server Components, state management, performance |
+| Frontend | `remix-expert` | React Router 7 / Remix v2, routing, loaders, actions, forms, mutations, errors, testing |
 | Frontend | `vue-expert` | Vue 3.5, Composition API, Nuxt 4, Pinia |
 | Backend | `nestjs-expert` | NestJS 11, modules/DI, validation, TypeORM/Prisma, auth, testing |
 | Backend | `fastapi-expert` | FastAPI, Pydantic v2, async SQLAlchemy, dependency injection, testing |
@@ -48,7 +50,7 @@ Most skill packs cover *writing* code. Real feature work is write → wire the A
 
 The skill template and CI validation make adding a framework a well-defined PR: claim it in an issue, copy [templates/SKILL_TEMPLATE.md](templates/SKILL_TEMPLATE.md), write 3-6 references, and run the validator. Full walkthrough in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-- [x] React · Vue · NestJS · FastAPI · Fastify · Go · Flutter · React Native · SwiftUI · Jetpack Compose · Terraform · Playwright · Appium
+- [x] React · Vue · Remix / React Router 7 · NestJS · FastAPI · Fastify · Go · Flutter · React Native · SwiftUI · Jetpack Compose · Terraform · Playwright · Appium
 - [ ] Frontend: Angular, Svelte/SvelteKit, Astro
 - [ ] Backend: Django, Spring Boot, Rails, Laravel, .NET, Elixir/Phoenix
 - [ ] Mobile: Kotlin Multiplatform, native watchOS/Wear OS, mobile release engineering (Fastlane, store rollouts)
