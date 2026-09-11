@@ -9,7 +9,7 @@ template contract or plugin layout is a major.
 ## [Unreleased]
 
 ### Added
-
+- `dbt-expert` skill for dbt Core 1.x, project structure, dependencies, tests and contracts, materializations, and incremental models.
 - `docker-expert` skill for Docker 27+, BuildKit, multi-stage images, Compose, and container hardening.
 - `scripts/new_skill.py` scaffolds a skill directory, a pre-filled `SKILL.md`,
   and reference stubs from the template.
