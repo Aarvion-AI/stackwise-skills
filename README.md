@@ -37,6 +37,7 @@ Every skill is framework-specific, production-focused, and follows one enforced 
 | Mobile | `jetpack-compose-expert` | Android native: Compose, state/recomposition, Hilt, Navigation |
 | Infra | `terraform-expert` | Terraform 1.x, module design, state management, plan review, CI |
 | Infra | `docker-expert` | Docker 27+, BuildKit, multi-stage images, Docker Compose, health checks |
+| Data | `dbt-expert` | dbt Core 1.x, project structure, dependencies, tests and contracts, materializations, incremental models |
 | QA (web) | `playwright-expert` | Playwright E2E, fixtures, network mocking, visual regression, CI |
 | QA (mobile) | `mobile-qa-expert` | Appium 2, real-device clouds (AWS Device Farm, BrowserStack), unattended flows |
 
@@ -56,7 +57,8 @@ The skill template and CI validation make adding a framework a well-defined PR: 
 - [ ] Mobile: Kotlin Multiplatform, native watchOS/Wear OS, mobile release engineering (Fastlane, store rollouts)
 - [ ] Infra: AWS CDK, Pulumi, Kubernetes/Helm, GitHub Actions
 - [ ] QA: Cypress, Maestro, Detox, k6 (load), pytest/Jest deep-dives
-- [ ] Data: PostgreSQL, Redis, Kafka, dbt
+- [x] Data: PostgreSQL, Redis, Kafka, dbt
+
 
 ## Contributing
 
